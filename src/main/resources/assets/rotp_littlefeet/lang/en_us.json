@@ -1,0 +1,16 @@
+{
+  "entity.rotp_littlefeet.little_feet": "Little Feet",
+  "stand.rotp_littlefeet.little_feet": "Little Feet",
+  "action.rotp_littlefeet.little_feet_punch": "Punch",
+  "action.rotp_littlefeet.little_feet_heavy_punch": "Heavy Punch",
+  "action.rotp_littlefeet.little_feet_finisher_punch": "Finisher Punch",
+  "action.rotp_littlefeet.little_feet_shrink_slash": "Shrink Slash",
+  "action.rotp_littlefeet.little_feet_instant_self_shrink": "Instant Self Shrink",
+  "action.rotp_littlefeet.little_feet_instant_self_grow": "Instant Self Grow",
+  "action.rotp_littlefeet.little_feet_slow_self_shrink": "Slow Self Shrink",
+  "action.rotp_littlefeet.little_feet_slow_self_grow": "Slow Self Grow",
+  "action.rotp_littlefeet.little_feet_nearest_entity_grow": "Grow Nearest Entity",
+  "action.rotp_littlefeet.little_feet_every_entity_grow": "Grow Every Entity",
+  "action.rotp_littlefeet.little_feet_block": "Block",
+  "effect.rotp_littlefeet.shrinking": "Shrinking"
+}

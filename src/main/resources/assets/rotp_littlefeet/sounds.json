@@ -1,0 +1,46 @@
+{
+  "little_feet_shrink1": {
+    "subtitle": "Shrink",
+    "sounds": [ "rotp_littlefeet:stand/littlefeet_shrink1" ]
+  },
+
+  "little_feet_shrink2": {
+    "subtitle": "Shrink",
+    "sounds": [ "rotp_littlefeet:stand/littlefeet_shrink2" ]
+  },
+
+  "little_feet_instant_self_shrink": {
+    "subtitle": "Self Shrink",
+    "sounds": [ "rotp_littlefeet:stand/littlefeet_shrink2" ]
+  },
+
+  "little_feet_instant_self_grow": {
+    "subtitle": "Self Grow",
+    "sounds": [ "rotp_littlefeet:stand/littlefeet_shrink1" ]
+  },
+
+  "little_feet_slow_self_shrink": {
+    "subtitle": "Self Shrink",
+    "sounds": [ "rotp_littlefeet:stand/littlefeet_shrink2" ]
+  },
+
+  "little_feet_slow_self_grow": {
+    "subtitle": "Self Grow",
+    "sounds": [ "rotp_littlefeet:stand/littlefeet_shrink1" ]
+  },
+
+  "little_feet_shrink_slash": {
+    "subtitle": "Shrink Slash",
+    "sounds": [ "rotp_littlefeet:stand/littlefeet_slash" ]
+  },
+
+  "little_feet_summon": {
+    "subtitle": "Stand Summon",
+    "sounds": [ "rotp_littlefeet:stand/littlefeet_summon" ]
+  },
+
+  "formaggio_little_feet": {
+    "subtitle": "Little Feet!",
+    "sounds": [ "rotp_littlefeet:stand_user/formaggio_littlefeet1", "rotp_littlefeet:stand_user/formaggio_littlefeet2", "rotp_littlefeet:stand_user/formaggio_littlefeet3", "rotp_littlefeet:stand_user/formaggio_littlefeet4" ]
+  }
+}
