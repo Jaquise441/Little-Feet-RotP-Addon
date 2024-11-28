@@ -40,7 +40,7 @@ public class InitStands {
                     .barrageHitSound(InitSounds.LITTLE_FEET_PUNCH_BARRAGE)));
 
     public static final RegistryObject<StandEntityHeavyAttack> LITTLE_FEET_FINISHER_PUNCH = ACTIONS.register("little_feet_finisher_punch",
-            () -> new LittleFeetDoubleShrinkSlash(new StandEntityHeavyAttack.Builder() // TODO finisher ability
+            () -> new LittleFeetHeavyShrinkSlash(new StandEntityHeavyAttack.Builder() // TODO finisher ability
                     .punchSound(InitSounds.LITTLE_FEET_PUNCH_HEAVY)
                     .partsRequired(StandPart.ARMS)));
 
@@ -53,6 +53,7 @@ public class InitStands {
 
     public static final RegistryObject<StandEntityLightAttack> LITTLE_FEET_SHRINK_SLASH = ACTIONS.register("little_feet_shrink_slash",
             () -> new LittleFeetShrinkSlash(new StandEntityLightAttack.Builder()
+                    .standPose(LittleFeetShrinkSlash.SHRINK)
                     .punchSound(InitSounds.LITTLE_FEET_SHRINK_SLASH)
                     .partsRequired(StandPart.ARMS)));
 
@@ -123,7 +124,7 @@ public class InitStands {
                             )
                             .defaultStats(StandStats.class, new StandStats.Builder()
                                     .tier(4)
-                                    .power(7)
+                                    .power(11)
                                     .speed(12)
                                     .range(3, 4)
                                     .durability(15)
@@ -134,7 +135,7 @@ public class InitStands {
                             .build(),
 
                     InitEntities.ENTITIES,
-                    () -> new StandEntityType<LittleFeetEntity>(LittleFeetEntity::new, 0.7F, 2.1F)
+                    () -> new StandEntityType<LittleFeetEntity>(LittleFeetEntity::new, 0.55F, 1.85F)
                             .summonSound(InitSounds.LITTLE_FEET_SUMMON_SOUND)
                             .unsummonSound(InitSounds.LITTLE_FEET_UNSUMMON_SOUND))
                     .withDefaultStandAttributes();

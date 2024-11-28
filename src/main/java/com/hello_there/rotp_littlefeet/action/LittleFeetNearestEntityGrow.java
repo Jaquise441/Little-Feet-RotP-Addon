@@ -16,7 +16,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
-public class LittleFeetNearestEntityGrow extends StandEntityAction {
+public class
+LittleFeetNearestEntityGrow extends StandEntityAction {
 
     private static final double SEARCH_RADIUS = 60.0D;
 
