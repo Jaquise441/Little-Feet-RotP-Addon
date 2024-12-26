@@ -1,11 +1,12 @@
 package com.hello_there.rotp_littlefeet;
 
-import com.hello_there.rotp_littlefeet.init.InitEffects;
-import com.hello_there.rotp_littlefeet.init.InitEntities;
-import com.hello_there.rotp_littlefeet.init.InitSounds;
-import com.hello_there.rotp_littlefeet.init.InitStands;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import com.hello_there.rotp_littlefeet.init.InitEntities;
+import com.hello_there.rotp_littlefeet.init.InitSounds;
+import com.hello_there.rotp_littlefeet.init.InitStandEffects;
+import com.hello_there.rotp_littlefeet.init.InitStands;
 
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -30,6 +31,6 @@ public class LittleFeetAddon {
         InitSounds.SOUNDS.register(modEventBus);
         InitStands.ACTIONS.register(modEventBus);
         InitStands.STANDS.register(modEventBus);
-        InitEffects.EFFECTS.register(modEventBus);
+        InitStandEffects.STAND_EFFECTS.register(modEventBus);
     }
 }
