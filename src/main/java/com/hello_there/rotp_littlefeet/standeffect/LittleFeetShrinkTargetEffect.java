@@ -13,6 +13,9 @@ import com.hello_there.rotp_littlefeet.init.InitStandEffects;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.SoundCategory;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import virtuoel.pehkui.api.ScaleData;
 import virtuoel.pehkui.api.ScaleModifier;
 import virtuoel.pehkui.api.ScaleRegistries;
@@ -129,6 +132,24 @@ public class LittleFeetShrinkTargetEffect extends StandEffectInstance {
     @Override
     protected boolean needsTarget() {
         return true;
+    }
+    
+    
+    
+    @Mod.EventBusSubscriber
+    public static class EventHandler {
+        
+        @SubscribeEvent
+        public static void onStandSummon(EntityJoinWorldEvent event) {
+            if (!event.getWorld().isClientSide() && event.getEntity() instanceof StandEntity) {
+                StandEntity stand = (StandEntity) event.getEntity();
+                LivingEntity user = stand.getUser();
+                if (user != null) {
+                    updateStandEntityScale(user, stand);
+                }
+            }
+        }
+        
     }
 
 }
