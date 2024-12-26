@@ -10,7 +10,6 @@ import com.github.standobyte.jojo.power.impl.stand.IStandPower;
 import com.hello_there.rotp_littlefeet.init.InitSounds;
 import com.hello_there.rotp_littlefeet.init.InitStandEffects;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.SoundCategory;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
@@ -36,23 +35,13 @@ public class LittleFeetShrinkTargetEffect extends StandEffectInstance {
     @Override
     protected void start() {}
 
-    @Deprecated
-    // TODO remove this when the next public update comes out
-    protected void tickTarget(LivingEntity target) {}
-
     private static final float MIN_SCALE = 0.15F;
     private static final float SHRINK_INCREMENT = 0.05F;
     private static final int SHRINK_INTERVAL = 160;
     @Override
     protected void tick() {
         if (!world.isClientSide()) {
-
-            LivingEntity target = null;
-            Entity t = getTarget();
-            if (t instanceof LivingEntity) target = (LivingEntity) t;
-            // TODO when the next update comes out, replace the monstrosity above with this line:
-//            LivingEntity target = getTargetLiving();
-
+            LivingEntity target = getTargetLiving();
             if (target == null) return;
 
             if (tickCount % SHRINK_INTERVAL == 0) {
@@ -116,13 +105,7 @@ public class LittleFeetShrinkTargetEffect extends StandEffectInstance {
     @Override
     protected void stop() {
         if (!world.isClientSide()) {
-
-            LivingEntity target = null;
-            Entity t = getTarget();
-            if (t instanceof LivingEntity) target = (LivingEntity) t;
-            // TODO when the next update comes out, replace the monstrosity above with this line:
-//            LivingEntity target = getTargetLiving();
-
+            LivingEntity target = getTargetLiving();
             if (target != null) {
                 resetShrink(target);
             }
