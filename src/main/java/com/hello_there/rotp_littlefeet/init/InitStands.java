@@ -12,6 +12,7 @@ import com.github.standobyte.jojo.power.impl.stand.StandInstance.StandPart;
 import com.github.standobyte.jojo.power.impl.stand.stats.StandStats;
 import com.github.standobyte.jojo.power.impl.stand.type.EntityStandType;
 import com.github.standobyte.jojo.power.impl.stand.type.StandType;
+import com.github.standobyte.jojo.util.mod.StoryPart;
 import com.hello_there.rotp_littlefeet.LittleFeetAddon;
 import com.hello_there.rotp_littlefeet.action.*;
 import com.hello_there.rotp_littlefeet.entity.LittleFeetEntity;
@@ -111,6 +112,7 @@ public class InitStands {
                     STANDS,
                     () -> new EntityStandType.Builder<StandStats>()
                             .color(0x6600CC)
+                            .storyPartName(StoryPart.GOLDEN_WIND.getName())
                             .leftClickHotbar(
                                     LITTLE_FEET_PUNCH.get(),
                                     LITTLE_FEET_BARRAGE.get(),

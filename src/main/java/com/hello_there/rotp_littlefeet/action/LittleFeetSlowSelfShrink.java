@@ -4,7 +4,6 @@ import com.github.standobyte.jojo.action.stand.StandEntityAction;
 import com.github.standobyte.jojo.entity.stand.StandEntity;
 import com.github.standobyte.jojo.entity.stand.StandEntityTask;
 import com.github.standobyte.jojo.power.impl.stand.IStandPower;
-import javafx.scene.transform.Scale;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import virtuoel.pehkui.util.ScaleUtils;
