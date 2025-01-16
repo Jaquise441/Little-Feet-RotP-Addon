@@ -9,11 +9,11 @@ import com.github.standobyte.jojo.entity.stand.StandPose;
 import com.github.standobyte.jojo.entity.stand.StandStatFormulas;
 import com.github.standobyte.jojo.power.impl.stand.IStandPower;
 import com.github.standobyte.jojo.util.mc.damage.StandEntityDamageSource;
-import com.hello_there.rotp_littlefeet.init.InitEffects;
 import com.hello_there.rotp_littlefeet.init.InitSounds;
+import com.hello_there.rotp_littlefeet.init.InitStandEffects;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.potion.EffectInstance;
 
 public class LittleFeetShrinkSlash extends StandEntityLightAttack{
 
@@ -57,10 +57,13 @@ public class LittleFeetShrinkSlash extends StandEntityLightAttack{
         protected void afterAttack(StandEntity stand, Entity target, StandEntityDamageSource dmgSource, StandEntityTask task, boolean hurt, boolean killed) {
             super.afterAttack(stand, target, dmgSource, task, hurt, killed);
 
-            if (hurt && target instanceof LivingEntity) {
+            if (!stand.level.isClientSide() && hurt && target instanceof LivingEntity) {
                 LivingEntity livingTarget = (LivingEntity) target;
 
-                livingTarget.addEffect(new EffectInstance(InitEffects.SHRINKING.get(), 999999999, 1, false, false));
+                IStandPower userPower = stand.getUserPower();
+                if (userPower != null) {
+                    userPower.getContinuousEffects().getOrCreateEffect(InitStandEffects.SHRINK_TARGET.get(), livingTarget);
+                }
             }
         }
     }

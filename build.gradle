@@ -157,7 +157,7 @@ dependencies {
 	implementation fg.deobf("standobyte.jojo:JJBA-RipplesOfThePast:${main_mod_version}")
     implementation fg.deobf("curse.maven:pehkui-319596:5393070")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-
+	compileOnly 'team.unnamed:mocha:3.0.0'
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
