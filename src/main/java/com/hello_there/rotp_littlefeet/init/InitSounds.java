@@ -48,6 +48,15 @@ public class InitSounds {
     public static final RegistryObject<SoundEvent> LITTLE_FEET_SHRINK_SLASH = SOUNDS.register("little_feet_shrink_slash",
             () -> new SoundEvent(new ResourceLocation(LittleFeetAddon.MOD_ID, "little_feet_shrink_slash")));
 
+    public static final RegistryObject<SoundEvent> FORMAGGIO_BARRAGE = SOUNDS.register("formaggio_barrage",
+            () -> new SoundEvent(new ResourceLocation(LittleFeetAddon.MOD_ID, "formaggio_barrage")));
+
+    public static final RegistryObject<SoundEvent> FORMAGGIO_MAD = SOUNDS.register("formaggio_mad",
+            () -> new SoundEvent(new ResourceLocation(LittleFeetAddon.MOD_ID, "formaggio_mad")));
+
+    public static final RegistryObject<SoundEvent> FORMAGGIO_BASTARD = SOUNDS.register("formaggio_bastard",
+            () -> new SoundEvent(new ResourceLocation(LittleFeetAddon.MOD_ID, "formaggio_bastard")));
+
     public static final OstSoundList LITTLE_FEET_OST = new OstSoundList(
             new ResourceLocation(LittleFeetAddon.MOD_ID, "little_feet_ost"), SOUNDS);
 }

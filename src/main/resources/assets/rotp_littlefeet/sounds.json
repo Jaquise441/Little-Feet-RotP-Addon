@@ -41,6 +41,18 @@
 
   "formaggio_little_feet": {
     "subtitle": "Little Feet!",
-    "sounds": [ "rotp_littlefeet:stand_user/formaggio_littlefeet1", "rotp_littlefeet:stand_user/formaggio_littlefeet2", "rotp_littlefeet:stand_user/formaggio_littlefeet3", "rotp_littlefeet:stand_user/formaggio_littlefeet4" ]
+    "sounds": [ "rotp_littlefeet:stand_user/formaggio_littlefeet1", "rotp_littlefeet:stand_user/formaggio_littlefeet3", "rotp_littlefeet:stand_user/formaggio_littlefeet4" ]
+  },
+  "formaggio_bastard": {
+    "subtitle": "You bastard!",
+    "sounds": [ "rotp_littlefeet:stand_user/formaggio_bastard" ]
+  },
+  "formaggio_mad": {
+    "subtitle": "Are you mad!?",
+    "sounds": [ "rotp_littlefeet:stand_user/formaggio_areyoumad" ]
+  },
+  "formaggio_barrage": {
+    "subtitle": "I'm going to climb my way out of this hellhole!",
+    "sounds": [ "rotp_littlefeet:stand_user/formaggio_rage", "rotp_littlefeet:stand_user/formaggio_barrage_yap" ]
   }
 }

@@ -31,7 +31,7 @@ logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
 credits="StandoByte, " #optional
 # A text field displayed in the mod UI
-authors="You" #optional
+authors="Hello There, StandoByte, Model by: August_Deadge" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 An addon for Ripples of the Past, adding Little Feet to the game.

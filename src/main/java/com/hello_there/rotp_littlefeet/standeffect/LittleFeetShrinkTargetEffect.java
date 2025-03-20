@@ -66,6 +66,8 @@ public class LittleFeetShrinkTargetEffect extends StandEffectInstance {
             ScaleTypes.DEFENSE.getScaleData(target).setScale(scale);
             ScaleTypes.KNOCKBACK.getScaleData(target).setScale((scale - 0.15f) / 0.85f);
             ScaleTypes.MINING_SPEED.getScaleData(target).setScale(scale);
+            ScaleTypes.HEALTH.getScaleData(target).setScale(scale);
+
         }
     }
 

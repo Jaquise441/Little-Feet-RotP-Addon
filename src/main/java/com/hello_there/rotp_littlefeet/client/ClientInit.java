@@ -2,7 +2,7 @@ package com.hello_there.rotp_littlefeet.client;
 
 import com.hello_there.rotp_littlefeet.LittleFeetAddon;
 import com.hello_there.rotp_littlefeet.init.InitStands;
-import com.hello_there.rotp_littlefeet.client.render.entity.renderer.stand.LittleFeetRenderer;
+import com.hello_there.rotp_littlefeet.client.render.entity.stand.LittleFeetRenderer;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

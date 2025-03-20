@@ -28,33 +28,38 @@ public class InitStands {
     public static final DeferredRegister<StandType<?>> STANDS = DeferredRegister.create(
             (Class<StandType<?>>) ((Class<?>) StandType.class), LittleFeetAddon.MOD_ID);
 
-    // ======================================== Example Stand ========================================
+    // ======================================== Little Feet ========================================
 
 
-    // Create all the abilities here...
     public static final RegistryObject<StandEntityAction> LITTLE_FEET_PUNCH = ACTIONS.register("little_feet_punch",
             () -> new StandEntityLightAttack(new StandEntityLightAttack.Builder()
                     .punchSound(InitSounds.LITTLE_FEET_PUNCH_LIGHT)));
 
     public static final RegistryObject<StandEntityAction> LITTLE_FEET_BARRAGE = ACTIONS.register("little_feet_barrage",
             () -> new StandEntityMeleeBarrage(new StandEntityMeleeBarrage.Builder()
-                    .barrageHitSound(InitSounds.LITTLE_FEET_PUNCH_BARRAGE)));
+                    .barrageHitSound(InitSounds.LITTLE_FEET_PUNCH_BARRAGE)
+                    .standSound(InitSounds.FORMAGGIO_BARRAGE)));
 
     public static final RegistryObject<StandEntityHeavyAttack> LITTLE_FEET_FINISHER_PUNCH = ACTIONS.register("little_feet_finisher_punch",
             () -> new LittleFeetHeavyShrinkSlash(new StandEntityHeavyAttack.Builder() // TODO finisher ability
                     .punchSound(InitSounds.LITTLE_FEET_PUNCH_HEAVY)
+                    .shout(InitSounds.FORMAGGIO_BASTARD)
+                    .resolveLevelToUnlock(1)
                     .partsRequired(StandPart.ARMS)));
 
     public static final RegistryObject<StandEntityHeavyAttack> LITTLE_FEET_HEAVY_PUNCH = ACTIONS.register("little_feet_heavy_punch",
             () -> new StandEntityHeavyAttack(new StandEntityHeavyAttack.Builder()
                     .shiftVariationOf(LITTLE_FEET_PUNCH).shiftVariationOf(LITTLE_FEET_BARRAGE)
                     .setFinisherVariation(LITTLE_FEET_FINISHER_PUNCH)
+                    .shout(InitSounds.FORMAGGIO_BASTARD)
                     .punchSound(InitSounds.LITTLE_FEET_PUNCH_HEAVY)
                     .partsRequired(StandPart.ARMS)));
 
     public static final RegistryObject<StandEntityLightAttack> LITTLE_FEET_SHRINK_SLASH = ACTIONS.register("little_feet_shrink_slash",
             () -> new LittleFeetShrinkSlash(new StandEntityLightAttack.Builder()
                     .standPose(LittleFeetShrinkSlash.SHRINK)
+                    .resolveLevelToUnlock(1)
+                    .shout(InitSounds.FORMAGGIO_BASTARD)
                     .punchSound(InitSounds.LITTLE_FEET_SHRINK_SLASH)
                     .partsRequired(StandPart.ARMS)));
 
@@ -65,6 +70,7 @@ public class InitStands {
             () -> new LittleFeetInstantSelfShrink(new StandEntityAction.Builder()
                     .standSound(InitSounds.LITTLE_FEET_INSTANT_SELF_SHRINK)
                     .staminaCost(75)
+                    .resolveLevelToUnlock(2)
                     .cooldown(80)
                     .partsRequired(StandPart.ARMS)));
 
@@ -73,6 +79,7 @@ public class InitStands {
                     .standSound(InitSounds.LITTLE_FEET_INSTANT_SELF_GROW)
                     .shiftVariationOf(LITTLE_FEET_INSTANT_SELF_SHRINK)
                     .staminaCost(75)
+                    .resolveLevelToUnlock(2)
                     .cooldown(80)
                     .partsRequired(StandPart.ARMS)));
 
@@ -81,6 +88,7 @@ public class InitStands {
                     .holdType(80)
                     .standSound(InitSounds.LITTLE_FEET_SLOW_SELF_SHRINK)
                     .staminaCost(75)
+                    .resolveLevelToUnlock(2)
                     .cooldown(80)
                     .partsRequired(StandPart.ARMS)));
 
@@ -90,12 +98,14 @@ public class InitStands {
                     .standSound(InitSounds.LITTLE_FEET_SLOW_SELF_GROW)
                     .shiftVariationOf(LITTLE_FEET_SLOW_SELF_SHRINK)
                     .staminaCost(75)
+                    .resolveLevelToUnlock(2)
                     .partsRequired(StandPart.ARMS)));
 
     public static final RegistryObject<StandEntityAction> LITTLE_FEET_NEAREST_ENTITY_GROW = ACTIONS.register("little_feet_nearest_entity_grow",
             () -> new LittleFeetNearestEntityGrow(new StandEntityAction.Builder()
                     .standSound(InitSounds.LITTLE_FEET_SLOW_SELF_GROW)
                     .staminaCost(75)
+                    .resolveLevelToUnlock(1)
                     .partsRequired(StandPart.ARMS)));
 
     public static final RegistryObject<StandEntityAction> LITTLE_FEET_EVERY_ENTITY_GROW = ACTIONS.register("little_feet_every_entity_grow",
@@ -103,15 +113,15 @@ public class InitStands {
                     .standSound(InitSounds.LITTLE_FEET_SLOW_SELF_GROW)
                     .shiftVariationOf(LITTLE_FEET_NEAREST_ENTITY_GROW)
                     .staminaCost(75)
+                    .resolveLevelToUnlock(1)
                     .partsRequired(StandPart.ARMS)));
 
 
-    // ...then create the Stand type instance. Moves, stats, entity sizes, and a few other things are determined here.
     public static final EntityStandRegistryObject<EntityStandType<StandStats>, StandEntityType<LittleFeetEntity>> LITTLE_FEET_STAND =
             new EntityStandRegistryObject<>("little_feet",
                     STANDS,
                     () -> new EntityStandType.Builder<StandStats>()
-                            .color(0x6600CC)
+                            .color(0x515DA5)
                             .storyPartName(StoryPart.GOLDEN_WIND.getName())
                             .leftClickHotbar(
                                     LITTLE_FEET_PUNCH.get(),
@@ -126,7 +136,7 @@ public class InitStands {
                             )
                             .defaultStats(StandStats.class, new StandStats.Builder()
                                     .tier(4)
-                                    .power(11)
+                                    .power(6)
                                     .speed(12)
                                     .range(3, 4)
                                     .durability(15)

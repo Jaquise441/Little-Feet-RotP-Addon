@@ -10,4 +10,8 @@ public class LittleFeetEntity extends StandEntity {
         super(type, world);
     }
 
+    @Override
+    public float getLeapStrength() {
+        return super.getLeapStrength() * 2F;
+    }
 }
